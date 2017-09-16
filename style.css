@@ -1,0 +1,73 @@
+h1 {
+    width: 30%;
+    border-radius: 5px;
+    padding: 30px;
+    background-color: #cd853f;
+    text-align: center;
+    color: white;
+}
+
+
+/*h2 {
+    font-size: 13px;
+    width: 35%;
+    border-radius: 5px;
+    padding: 50px;
+    background-color: #ffe4c4;
+    text-align: center;
+    color: green;
+}*/
+
+h5 {
+    background-color: blue;
+}
+
+
+.Stat-Container {
+	display: flex;
+
+}
+
+#div1 {
+
+    border-radius: 5px;
+  
+    height: 150px;
+}
+
+p{
+	background-color: #ffe4c4
+}
+
+.displayNum {
+    float: left;
+    font-size: 13px;
+    border-radius: 5px;
+    padding: 50px;
+    background-color: green;
+    text-align: center;
+    color: purple;
+
+}
+
+#imageContainer{
+	clear: both;
+}
+#crystal1 {
+
+    float: left;
+}
+
+#crystal2 {
+
+    float: left;
+}
+
+#crystal3 {
+    float: left;
+}
+
+#crystal4 {
+
+    float: left;
+}

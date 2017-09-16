@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Crystal Game</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <style type="text/css">
+
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Crystal Collector! <span id="number-to-guess"></span></h1>
+    </div>
+    <div>
+        <p>You will be given a random number at the satart of the game.<
+        <br>
+        <br> There are four crystals below. By clicking on a crystal you will add a specific amount of points to your total score.
+        <br>
+        <br> You win the game by matching your total score to a random number, you lose the game if your total score goes above the random number.
+        <br>
+        <br> The value of each crystal is hidden from you until you click on it.
+        <br>
+        <br> Each time when the game start the game will change the value of each crystal.</p>
+    </div>
+    <div class="Stats-Container">
+    <div id="div1">
+        <h2 class="displayNum" id="curNumber"></h2>
+     </div>
+     <div id="stats">   
+        <h3 class="displayNum">wincount: <span id="wincount"></span></h3>
+        <h3 class="displayNum">lostcount: <span id="lostcount"></span></h3>
+    </div>
+    </div>
+    <div id='imageContainer'>
+        <img id="crystal1" src="images/crystal1.jpg" height="100">
+        <img id="crystal2" src="images/crystal2.jpg" height="100">
+        <img id="crystal3" src="images/crystal3.jpg" height="100">
+        <img id="crystal4" src="images/crystal4.jpg" height="100">
+    </div>
+    <div>
+        <h5>Your total score is:</h5>
+    </div>
+    <div id="totalscore">
+    </div>
+
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function() {
+
+        var targetNumber;
+        var score;
+        var crystal1Val;
+        var crystal2Val;
+        var crystal3Val;
+        var crystal4Val;
+        var wincount = 0;
+        var lostcount = 0;
+        var totalscore = 0;
+        $("#wincount").text(wincount);
+        $("#lostcount").text(lostcount);
+        $("#totalscore").text(totalscore);
+
+
+
+        function gameStart() {
+            targetNumber = Math.floor(Math.random() * (120 - 19) + 19);
+            score = 0;
+            crystal1 = Math.floor(Math.random() * 12 + 1);
+            crystal2 = Math.floor(Math.random() * 12 + 1);
+            crystal3 = Math.floor(Math.random() * 12 + 1);
+            crystal4 = Math.floor(Math.random() * 12 + 1);
+            $("#curNumber").html(targetNumber);
+            $("#totalscore").html(totalscore);
+
+        }
+        gameStart();
+
+        $("#crystal1").on("click", function() {
+            score += crystal1;
+            console.log(score)
+
+            if (score === targetNumber) {
+                alert("You Win!");
+                wincount = wincount + 1;
+                console.log("wincount = " + wincount);
+                $("#wincount").text(wincount);
+                document.getElementById("div1").text = wincount.toString();
+                gameStart();
+            } else if (score > targetNumber) {
+                alert("YOu Lose!");
+                lostcount = lostcount + 1;
+                console.log("lostcount = " + lostcount);
+                $("#lostcount").text(lostcount);
+                document.getElementById("div1").text = lostcount.toString();
+                gameStart();
+            }
+             $("#totalscore").text(score);
+        });
+
+        $("#crystal2").on("click", function() {
+            score += crystal1;
+            console.log(score)
+            if (score === targetNumber) {
+                alert("You Win!");
+                wincount = wincount + 1;
+                console.log("wincount = " + wincount);
+                $("#wincount").text(wincount);
+                document.getElementById("div1").text = wincount.toString();
+                gameStart();
+            } else if (score > targetNumber) {
+                alert("YOu Lose!");
+                lostcount = lostcount + 1;
+                console.log("lostcount = " + lostcount);
+                $("#lostcount").text(lostcount);
+                document.getElementById("div1").text = lostcount.toString();
+                gameStart();
+            }
+             $("#totalscore").text(score);
+        });
+
+        $("#crystal3").on("click", function() {
+            score += crystal2;
+            console.log(score)
+
+            if (score === targetNumber) {
+                alert("You Win!");
+                wincount = wincount + 1;
+                console.log("wincount = " + wincount);
+                $("#wincount").text(wincount);
+                document.getElementById("div1").text = wincount.toString();
+                gameStart();
+
+            } else if (score > targetNumber) {
+                alert("YOu Lose!");
+                lostcount = lostcount + 1;
+                console.log("lostcount = " + lostcount);
+                $("#lostcount").text(lostcount);
+                document.getElementById("div1").text = lostcount.toString();
+                gameStart();
+            }
+             $("#totalscore").text(score);
+        });
+
+        $("#crystal4").on("click", function() {
+            score += crystal2;
+            console.log(score)
+
+            if (score === targetNumber) {
+                alert("You Win!");
+                wincount = wincount + 1;
+                console.log("wincount = " + wincount);
+                $("#wincount").text(wincount);
+                document.getElementById("div1").text = wincount.toString();
+                gameStart();
+
+            } else if (score > targetNumber) {
+                alert("YOu Lose!");
+                lostcount = lostcount + 1;
+                console.log("lostcount = " + lostcount);
+                $("#lostcount").text(lostcount);
+                document.getElementById("div1").text = lostcount.toString();
+                gameStart();
+            }
+             $("#totalscore").text(score);
+
+        });
+    });
+    </script>
+</body>
+
+</html>
