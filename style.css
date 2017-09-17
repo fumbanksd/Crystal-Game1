@@ -22,6 +22,10 @@ h5 {
     background-color: blue;
 }
 
+h3{
+    background-color: green;
+}
+
 
 .Stat-Container {
 	display: flex;
