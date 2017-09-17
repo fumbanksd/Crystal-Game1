@@ -8,7 +8,7 @@ h1 {
 }
 
 
-/*h2 {
+h2 {
     font-size: 13px;
     width: 35%;
     border-radius: 5px;
@@ -16,7 +16,7 @@ h1 {
     background-color: #ffe4c4;
     text-align: center;
     color: green;
-}*/
+}
 
 h5 {
     background-color: blue;
@@ -44,13 +44,14 @@ p{
     font-size: 13px;
     border-radius: 5px;
     padding: 50px;
-    background-color: green;
+    background-color: ;
     text-align: center;
     color: purple;
 
 }
 
 #imageContainer{
+    background-color: blue;
 	clear: both;
 }
 #crystal1 {
